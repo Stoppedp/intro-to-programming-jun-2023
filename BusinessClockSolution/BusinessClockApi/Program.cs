@@ -1,3 +1,5 @@
+using BusinessClockApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,18 @@ if (app.Environment.IsDevelopment())
 }
 
 
+app.MapGet("/status", () =>
+
+{
+
+    var response = new GetStatusResponse
+    {
+        Open = true
+    };
+
+    return Results.Ok(response);
+
+});
 
 app.Run();
 
