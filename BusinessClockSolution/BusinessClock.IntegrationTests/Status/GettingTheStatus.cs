@@ -12,7 +12,7 @@ public class GettingTheStatus
     {
         var host = await AlbaHost.For<Program>();
 
-        var response = await host.Scenario(api =>
+       var response = await host.Scenario(api =>
         {
             api.Get.Url("/status");
             api.StatusCodeShouldBeOk();

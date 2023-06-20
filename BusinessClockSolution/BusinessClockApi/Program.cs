@@ -1,4 +1,7 @@
+
+
 using BusinessClockApi.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,21 +19,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
 app.MapGet("/status", () =>
-
 {
-
     var response = new GetStatusResponse
     {
-        Open = true
+        Open = true,
+       
     };
-
     return Results.Ok(response);
-
 });
 
 app.Run();
-
-
 
