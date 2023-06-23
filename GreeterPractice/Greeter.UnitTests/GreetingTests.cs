@@ -20,16 +20,18 @@ public class GreetingTests
 }
 
 
+
+
+
+[Theory]
+[InlineData("Windom", "Gordon", "Hello, Windom, and Gordon!")]
+[InlineData("Cooper", "Truman", "Hello, Cooper, and Truman!")]
+[InlineData("Cooper", "Hawk", "Hello, Cooper, and Hawk!")]
+
+public void TwoNames(string name1, string name2, string expected)
 {
-    [Theory]
-    
-    public void DoubleName(string name1,string name2, string expected)
-    {
-        var greeter = new GreetingMaker();
+   
+    string greeting = greeter.Greet(name1, name2);
 
-
-        string greeting = greeter.Greet(name);
-
-        Assert.Equal(expected, greeting);
-    }
+    Assert.Equal(expected, greeting);
 }

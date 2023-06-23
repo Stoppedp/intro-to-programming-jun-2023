@@ -1,9 +1,10 @@
 ﻿namespace Greeter;
 
-public class GreetingMaker
+public class GreetingMaker 
 {
     public GreetingMaker()
     {
+
     }
 
     public string Greet(string name)
@@ -22,5 +23,8 @@ public class GreetingMaker
             return "Hello, " + name + ".";
     }
 
-    public string GreetDoubleName(string name) { }
+    public string TwoNames(string name) 
+    {
+        
+    }
 }
